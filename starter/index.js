@@ -90,3 +90,16 @@ var finances = [
 // The total number of months included in the dataset.
 var totalMonths = finances.length;
 console.log("Total number of months: " + totalMonths);
+
+// The net total amount of Profit/Losses over the entire period.
+
+// Variable to store the net total
+var netTotal = 0;
+
+//Loop through array
+for (var i = 0; i < finances.length; i++) {
+  netTotal = netTotal + finances[i][1];
+}
+
+// Display the result
+console.log("Total: $" + netTotal);
