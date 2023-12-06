@@ -107,9 +107,35 @@ for (var i = 0; i < finances.length; i++) {
 // Display the result
 console.log("Total: $" + netTotal);
 
+// ** Average of the changes in Profit/Losses :
+
 // Initialize variables to track total change and previous month's profit
 var totalChange = 0;
 var previousProfit = finances[0][1];
 
 // Initialize a variable to track the number of changes
 var numberOfChanges = 0;
+
+// Iterate through the finances array
+for (var i = 1; i < finances.length; i++) {
+  var currentProfit = finances[i][1];
+  var monthlyChange = currentProfit - previousProfit;
+
+  // Add the monthly change to the total change
+  totalChange += monthlyChange;
+
+  // Increment the number of changes
+  numberOfChanges++;
+
+  // Update the previous month's profit for the next iteration
+  previousProfit = currentProfit;
+}
+
+// Calculate the average change
+var averageChange = totalChange / numberOfChanges;
+
+// Round to two decimals th result
+averageChange = averageChange.toFixed(2);
+
+// Display the result
+console.log("Average Change: " + averageChange);
