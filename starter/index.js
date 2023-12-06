@@ -106,3 +106,10 @@ for (var i = 0; i < finances.length; i++) {
 
 // Display the result
 console.log("Total: $" + netTotal);
+
+// Initialize variables to track total change and previous month's profit
+var totalChange = 0;
+var previousProfit = finances[0][1];
+
+// Initialize a variable to track the number of changes
+var numberOfChanges = 0;
