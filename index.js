@@ -134,7 +134,7 @@ for (var i = 1; i < finances.length; i++) {
 // Calculate the average change
 var averageChange = totalChange / numberOfChanges;
 
-// Round to two decimals th result
+// Round to two decimals the result
 averageChange = averageChange.toFixed(2);
 
 // Display the result
