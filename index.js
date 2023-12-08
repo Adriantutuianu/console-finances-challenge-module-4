@@ -175,3 +175,12 @@ console.log(
     maxIncreaseAmount +
     ")"
 );
+
+//Log the result for decrease
+console.log(
+  "Greatest Decrease in Profits/Losses: " +
+    maxDecreaseDate +
+    " ($" +
+    maxDecreaseAmount +
+    ")"
+);
