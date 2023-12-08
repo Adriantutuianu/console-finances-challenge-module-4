@@ -141,11 +141,15 @@ averageChange = averageChange.toFixed(2);
 console.log("Average Change: " + averageChange);
 
 // The greatest increase in Profit/Losses (date and amount) over the entire period.
+// The greatest decrease in Profit/Losses (date and amount) over the entire period.
+
 // Initialize variables
 var maxIncreaseDate = null;
 var maxIncreaseAmount = 0;
+var maxDecreaseDate = null;
+var maxDecreaseAmount = 0;
 
-// Iterate through the array to find the greatest increase
+// Iterate through the array to find the greatest increase/decrease
 for (var i = 1; i < finances.length; i++) {
   var currentDate = finances[i][0];
   var currentAmount = finances[i][1];
@@ -157,10 +161,13 @@ for (var i = 1; i < finances.length; i++) {
   if (difference > maxIncreaseAmount) {
     maxIncreaseAmount = difference;
     maxIncreaseDate = currentDate;
+  } else if (difference < maxDecreaseAmount) {
+    maxDecreaseAmount = difference;
+    maxDecreaseDate = currentDate;
   }
 }
 
-// Log the result
+//Log the result for increase
 console.log(
   "Greatest Increase in Profits/Losses: " +
     maxIncreaseDate +
