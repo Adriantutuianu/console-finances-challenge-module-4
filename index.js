@@ -159,3 +159,12 @@ for (var i = 1; i < finances.length; i++) {
     maxIncreaseDate = currentDate;
   }
 }
+
+// Log the result
+console.log(
+  "Greatest Increase in Profits/Losses: " +
+    maxIncreaseDate +
+    " ($" +
+    maxIncreaseAmount +
+    ")"
+);
