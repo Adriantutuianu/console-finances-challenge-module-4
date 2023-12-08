@@ -122,10 +122,10 @@ for (var i = 1; i < finances.length; i++) {
   var monthlyChange = currentProfit - previousProfit;
 
   // Add the monthly change to the total change
-  totalChange += monthlyChange;
+  totalChange += monthlyChange; // same with totalChange= TotalChange + monthlyChange;
 
   // Increment the number of changes
-  numberOfChanges++;
+  numberOfChanges++; //same with numberOfChanges= numberOfChanges + 1;
 
   // Update the previous month's profit for the next iteration
   previousProfit = currentProfit;
