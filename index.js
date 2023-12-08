@@ -144,3 +144,18 @@ console.log("Average Change: " + averageChange);
 // Initialize variables
 var maxIncreaseDate = null;
 var maxIncreaseAmount = 0;
+
+// Iterate through the array to find the greatest increase
+for (var i = 1; i < finances.length; i++) {
+  var currentDate = finances[i][0];
+  var currentAmount = finances[i][1];
+  var previousAmount = finances[i - 1][1];
+
+  var difference = currentAmount - previousAmount;
+
+  // Update the result if the current difference is greater
+  if (difference > maxIncreaseAmount) {
+    maxIncreaseAmount = difference;
+    maxIncreaseDate = currentDate;
+  }
+}
