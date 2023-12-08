@@ -139,3 +139,8 @@ averageChange = averageChange.toFixed(2);
 
 // Display the result
 console.log("Average Change: " + averageChange);
+
+// The greatest increase in Profit/Losses (date and amount) over the entire period.
+// Initialize variables
+var maxIncreaseDate = null;
+var maxIncreaseAmount = 0;
